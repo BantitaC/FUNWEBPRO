@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delish Café</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="pics/titleLOGO.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inconsolata';
+            background-color: #FFF7FC;
+        }
+
+        .font-logo {
+            font-family: 'Inknut Antiqua';
+        }
+
+        a {
+            color: palevioletred;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+            text-decoration-color: #000000;
+        }
+
+        .card {
+            width: 430px;
+            height: 380px;
+            padding: 30px;
+            border-radius: 0%;
+            background-color: #FFD1DA;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .pics img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .cardall {
+            width: 280px;
+            height: 280px;
+            padding: 20px;
+            border-radius: 0%;
+            background-color: #FFD1DA;
+            margin: 8.9px;
+        }
+
+        .cardall img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .detail-btn,
+        .order-btn,
+        .close-modal,
+        .submit-btn {
+            background-color: palevioletred;
+            color: #FFF7FC;
+        }
+
+        .form-control {
+            border-radius: 0%;
+        }
+    </style>
+</head>
+
+<body class="m-4">
+    <div class="head d-flex justify-content-between">
+        <div>
+            <h1 class="font-logo fs-2">DELISH CAFE</h1>
+            <p>Good food, better coffee, and the best vibes.</p>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/">
+                <img src="pics/facebook (3).png" class="pe-2">
+            </a>
+            <a href="https://www.instagram.com/">
+                <img src="pics/IG.png" class="pe-2">
+            </a>
+            <a href="https://www.tiktok.com/explore">
+                <img src="pics/tiktok.png" class="pe-2">
+            </a>
+            <a href="https://www.line.me/th/">
+                <img src="pics/line.png" class="pe-2">
+            </a>
+            <a href="#">
+                <img src="pics/favorite.png">
+            </a>
+        </div>
+    </div>
+
+    <nav class="nav">
+        <a class="nav-link ps-0 text-dark" href="#">Home</a>
+        <a class="nav-link text-dark" href="#food">Food</a>
+        <a class="nav-link text-dark" href="#dessert">Dessert</a>
+        <a class="nav-link text-dark" href="#beverage">Beverage</a>
+        <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#reference">References</a>
+        <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#about">DELISH CAFE</a>
+    </nav>
+
+    <div class="border border-dark mt-2 mb-4"></div>
+
+    <h3>Recommended</h3>
+    <div class="d-flex justify-content-between">
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/99/d8/ec/99d8ec07eb8b5f8d31f670c7cf34b045.jpg">
+            <p class="pt-2">FOOD</p>
+            <p class="fs-5 fw-bold">Stir-fried Pork with Thai Basil</p>
+            <p> ★ ★ ★ ★ ★</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/9a/03/49/9a0349c5e7d914ed766e874ff8b21b64.jpg" class="w-100">
+            <p class="pt-2">DESSERT</p>
+            <p class="fs-5 fw-bold">Gingerbread cookies</p>
+            <p> ★ ★ ★ ★ ★</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/cb/7c/c6/cb7cc6203af771138abc4e6f2392ffa9.jpg" class="w-100">
+            <p class="pt-2">BEVERAGE</p>
+            <p class="fs-5 fw-bold">Thai tea</p>
+            <p> ★ ★ ★ ★ ★</p>
+        </div>
+    </div>
+
+    <div class="text-center mt-5 mb-5">
+        <div class="row row-cols-2 ms-0 me-0">
+            <div class="col border border-dark pt-2 pb-2">Welcome to “DELISH CAFE”</div>
+            <div class="col border border-dark pt-2 pb-2">BREAKFAST / LUNCH / BREAK / DINNER</div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between pics mb-4">
+        <a href="#food">
+            <img src="https://i.pinimg.com/736x/ee/45/50/ee4550ae1cd32d8eb0cd8b826467d947.jpg" class="rounded-circle">
+        </a>
+        <a href="#beverage">
+            <img src="https://i.pinimg.com/736x/9f/ab/35/9fab35fd5966ba50ae546a3e4c21d2e1.jpg" class="rounded-circle">
+        </a>
+        <a href="#dessert">
+            <img src="https://i.pinimg.com/736x/51/84/5c/51845c0fdd32916a672fc0f9b6d7a1f8.jpg" class="rounded-circle">
+        </a>
+        <a href="#beverage">
+            <img src="https://i.pinimg.com/736x/32/29/23/32292370bac444b1d13eb08e9219f671.jpg" class="rounded-circle">
+        </a>
+        <a href="#food">
+            <img src="https://i.pinimg.com/736x/9c/b0/46/9cb046d743407b500f963154d0fb726c.jpg" class="rounded-circle">
+        </a>
+        <a href="#dessert">
+            <img src="https://i.pinimg.com/736x/9d/1e/a9/9d1ea932c2431921913a65714734a5ee.jpg" class="rounded-circle">
+        </a>
+    </div>
+
+    <h3 id="food">♡ Foods ♡</h3>
+    <div>
+        <div class="row">
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/24/2e/c7/242ec7057138380c080e382cf9a82a84.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Stir-fried Chinese Kale with Crispy Pork</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food1">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/99/d8/ec/99d8ec07eb8b5f8d31f670c7cf34b045.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Stir-fried minced pork with holy basil</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food2">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/ee/45/50/ee4550ae1cd32d8eb0cd8b826467d947.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Stir-fried crispy pork with holy basil</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food3">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/9c/b0/46/9cb046d743407b500f963154d0fb726c.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Stir-fried minced beef with Thai basil</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food4">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/f6/aa/5a/f6aa5a4d7b37a95b232f6b0c26b5b3eb.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Stir-fried pork belly with chili and salt</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food5">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/bc/a1/c0/bca1c08a48025ef517f605b297ac7222.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Clear soup with tofu and minced pork</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food6">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/f1/37/df/f137dfab853c66ec405fda5aa854779c.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Fried rice with fermented pork sausage</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food7">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/77/95/0f/77950f8967a21968d10531d59961dbf8.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Spaghetti with spicy basil chicken</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food8">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/2a/c8/20/2ac8208f3c5f4d337744a1a14b9f144f.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Steamed eggs with Thai-style sweet and sour sauce</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food9">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/7c/d7/12/7cd71233b9644747a20a73f16df87e72.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Tom Yum Goong (creamy shrimp spicy and sour soup)</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food10">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/2c/a1/4f/2ca14fd4cbd2c776692ef5fcb3861c29.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Stir-fried dry sukiyaki</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food11">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/33/f4/4c/33f44cd4a32c0e203cf983ba3a9389c7.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Stir-fried cabbage with shrimp</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food12">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/9a/28/1f/9a281f413ee364bf25b4892b04163af6.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Shrimp fried rice</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food13">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/2f/fb/4b/2ffb4bc8ceb9c69f28e3c004b67773ff.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Garlic and pepper fried pork</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food14">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/7e/64/15/7e6415f0145d07ac002366237a195380.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Minced pork omelette</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food15">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/de/0c/4f/de0c4f4ff4034cb15c8e20bd4546f541.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Sweet and sour stir-fry</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food16">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/3c/8d/d4/3c8dd4174e09df1f2059a3f352aadcdf.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Stir-fried instant noodles</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food17">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/65/18/97/651897e61328309bdcb31955e651cd95.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Stir-fried pork with soy sauce</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food18">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/e5/42/5b/e5425ba45f53401be2fef6404f44f0e9.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Three-flavor shrimp</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food19">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/21/4e/10/214e10278b213298db06938d412e8bcd.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Steamed egg with minced pork</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#food20">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="mt-4" id="dessert">♡ Desserts ♡</h3>
+    <div>
+        <div class="row">
+            <div class="cardall col-3" data-bs-toggle="modal">
+                <img src="https://i.pinimg.com/736x/1e/37/16/1e3716b7af295077dc3ef02bb8a40d1e.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Lemon raspberry cheesecake</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#des1">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col">
+                <img src="https://i.pinimg.com/736x/61/43/c2/6143c261d1a8c55b0e7654b3cda3d56d.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Flan Cake</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#des2">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/9a/03/49/9a0349c5e7d914ed766e874ff8b21b64.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Gingerbread cookies</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#des3">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/29/57/eb/2957eb3b9d206dd838ff15f8fdd53d7a.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Pancakes</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#des4">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/f1/32/a3/f132a3567c25860c2def0560a0fff142.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Chocolate brownies</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#des5">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/9d/1e/a9/9d1ea932c2431921913a65714734a5ee.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Bua Loy with sweet egg</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#des6">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/51/84/5c/51845c0fdd32916a672fc0f9b6d7a1f8.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Ice cream cookies</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#des7">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/16/63/27/16632744de411a34aaeb9a3031ceeedc.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Japanese Strawberry Shortcake</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#des8">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/fc/77/2d/fc772df093b6dfc56eae76a3ed85f4ff.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Banoffee Pie</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#des9">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/48/f4/a7/48f4a7ee460877fd84ae3d6be9de00f3.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Strawberry Daifuku</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#des10">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="mt-4" id="beverage">♡ Beverages ♡</h3>
+    <div>
+        <div class="row">
+            <div class="cardall col-3" data-bs-toggle="modal">
+                <img src="https://i.pinimg.com/736x/cb/7c/c6/cb7cc6203af771138abc4e6f2392ffa9.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Thai tea</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#bev1">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/8f/17/7c/8f177ca3e55f8c85b978ee72658a365f.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Mocha</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#bev2">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/9f/ab/35/9fab35fd5966ba50ae546a3e4c21d2e1.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Pink milk</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#bev3">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/16/11/5d/16115dbec9d9daeabe198e785328425a.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Lemon tea</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#bev4">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/5a/ef/22/5aef222483bb5fbccbb9a9746e99b0a1.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Strawberry smoothie</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#bev5">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/32/29/23/32292370bac444b1d13eb08e9219f671.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Mixed berry smoothie</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#bev6">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/65/1d/e0/651de0feffe54e4165c438cef161708c.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Soy milk</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#bev7">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/8b/f4/3a/8bf43ae9833cace8a625cc912d1dd0ff.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Yogurt Smoothie</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#bev8">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/cf/b9/da/cfb9da8a504e4834555bc596e58f5f74.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Green Kefir Avocado Smoothie</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#bev9">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+            <div class="cardall col-3">
+                <img src="https://i.pinimg.com/736x/47/68/d6/4768d654be99066024eae3ea4c1efb8f.jpg" class="w-100">
+                <p class="fs-6 fw-bold pt-2">Watermelon Smoothie</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="detail-btn me-2" data-bs-toggle="modal"
+                        data-bs-target="#bev10">Detail</button>
+                    <button type="button" class="order-btn" onclick="order()">ORDER!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="mt-4" id="custom">♡ Custom your menu ♡</h3>
+    <div class="input-group mb-3 mt-3">
+        <input type="text" class="form-control" placeholder="Which type of menu suits you best?"
+            aria-label="Recipient's username" aria-describedby="button-addon2" id="menuInput">
+        <button class="submit-btn" type="button" onclick="ordercustom()">ORDER!</button>
+    </div>
+
+    <!-- Modal Food -->
+    <div class="modal fade " id="food1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food1Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Crispy pork</li>
+                    <li>Chinese Kale</li>
+                    <li>Chopped garlic</li>
+                    <li>Oyster sauce</li>
+                    <li>Seasoning sauce</li>
+                    <li>Fish sauce</li>
+                    <li>Sugar</li>
+                    <li>Pepper</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food11" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food11Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food11Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Glass noodles</li>
+                    <li>Cabbage or Chinese cabbage</li>
+                    <li>Morning glory</li>
+                    <li>Carrot</li>
+                    <li>Eggs</li>
+                    <li>Sukiyaki sauce</li>
+                    <li>Garlic</li>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food12" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food12Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food12Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Cabbage</li>
+                    <li>Fresh shrimp</li>
+                    <li>Shrimp roe</li>
+                    <li>Lard</li>
+                    <li>Chopped garlic</li>
+                    <li>Soy sauce</li>
+                    <li>Seasoning sauce</li>
+                    <li>White pepper</li>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food2Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Minced pork</li>
+                    <li>Holy basil leaves</li>
+                    <li>Oyster sauce</li>
+                    <li>Light soy sauce</li>
+                    <li>Sugar</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food3Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Crispy pork</li>
+                    <li>Holy basil leaves</li>
+                    <li>Oyster sauce</li>
+                    <li>Light soy sauce</li>
+                    <li>Sugar</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food13" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food13Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food13Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Steamed rice</li>
+                    <li>Shrimp</li>
+                    <li>Eggs</li>
+                    <li>Green onions</li>
+                    <li>Chopped garlic</li>
+                    <li>Light soy sauce</li>
+                    <li>Oyster sauce</li>
+                    <li>Oil</li>
+                    <li>Sugar</li>
+                    <li>Seasoning powder</li>
+                    <li>Butter</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food14" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food14Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food14Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Pork</li>
+                    <li>Oyster sauce</li>
+                    <li>Seasoning sauce</li>
+                    <li>Sugar</li>
+                    <li>Dark soy sauce</li>
+                    <li>Ground pepper</li>
+                    <li>Chopped garlic</li>
+                    <li>Pounded coriander roots</li>
+                    <li>Oil</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food4Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food4Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Minced beef</li>
+                    <li>Tri-colored bell peppers</li>
+                    <li>Thai basil leaves</li>
+                    <li>Oyster sauce</li>
+                    <li>Shoyu</li>
+                    <li>Sugar</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food5Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food5Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Pork belly</li>
+                    <li>Red chili</li>
+                    <li>Garlic</li>
+                    <li>Sliced kaffir lime leaves</li>
+                    <li>Seasoning powder</li>
+                    <li>Sugar</li>
+                    <li>Salt</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="food6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food6Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food6Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Minced pork</li>
+                    <li>Egg tofu</li>
+                    <li>Carrot</li>
+                    <li>Pork bone broth</li>
+                    <li>Garlic</li>
+                    <li>Whole peppercorns</li>
+                    <li>Coriander roots</li>
+                    <li>Coriander leaves</li>
+                    <li>Light soy sauce</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food7Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food7Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Rice</li>
+                    <li>Eggs</li>
+                    <li>Chopped garlic</li>
+                    <li>Fermented pork sausage</li>
+                    <li>Sliced green onions</li>
+                    <li>Carrot</li>
+                    <li>Oyster sauce</li>
+                    <li>Light soy sauce</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food8Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food8Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Spaghetti noodles</li>
+                    <li>Chicken</li>
+                    <li>Crushed chili and garlic</li>
+                    <li>Fingerroot</li>
+                    <li>Young peppercorns</li>
+                    <li>Red chili peppers</li>
+                    <li>Baby corn</li>
+                    <li>Carrot</li>
+                    <li>Holy basil leaves</li>
+                    <li>Oyster sauce</li>
+                    <li>Seasoning sauce</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food15" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food15Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food15Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Oyster sauce</li>
+                    <li>Seasoning sauce</li>
+                    <li>Minced pork</li>
+                    <li>Eggs</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="card-food16" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="card-food16Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="card-food16Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Pork</li>
+                    <li>Onion</li>
+                    <li>Tomatoes</li>
+                    <li>Garlic</li>
+                    <li>Green onions</li>
+                    <li>Seasoning sauce</li>
+                    <li>Oyster sauce</li>
+                    <li>Tomato ketchup</li>
+                    <li>Pepper</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food17" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food17Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food17Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Instant noodles</li>
+                    <li>Shrimp</li>
+                    <li>Chopped dried chili and garlic</li>
+                    <li>Light soy sauce</li>
+                    <li>Oyster sauce</li>
+                    <li>Sugar</li>
+                    <li>Carrot, long beans, broccoli</li>
+                    <li>Holy basil leaves</li>
+                    <li>Kaffir lime leaves</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food18" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food18Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food18Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Rice noodles</li>
+                    <li>Chinese kale</li>
+                    <li>Carrot</li>
+                    <li>Cabbage</li>
+                    <li>Egg</li>
+                    <li>Garlic</li>
+                    <li>Dark soy sauce</li>
+                    <li>Light soy sauce</li>
+                    <li>Seasoning sauce</li>
+                    <li>Oyster sauce</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food19" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food19Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food19Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Fresh shrimp</li>
+                    <li>Garlic</li>
+                    <li>Onion</li>
+                    <li>Tamarind juice</li>
+                    <li>Palm sugar</li>
+                    <li>Salt</li>
+                    <li>Vegetable oil</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food20" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food20Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food20Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Eggs</li>
+                    <li>Minced pork</li>
+                    <li>Pork bone broth</li>
+                    <li>Seasoning powder</li>
+                    <li>Fish sauce</li>
+                    <li>Fried garlic</li>
+                    <li>Sliced green onions and coriander</li>
+                    <li>Vegetable oil</li>
+                    <li>Ground pepper</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="card-food9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="card-food9Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="card-food9Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Eggs</li>
+                    <li>Onions</li>
+                    <li>Dried chilies</li>
+                    <li>Tamarind juice</li>
+                    <li>Palm sugar</li>
+                    <li>Fish sauce</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="food10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="food10Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="food10Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Shrimp</li>
+                    <li>Straw mushrooms</li>
+                    <li>Galangal</li>
+                    <li>Lemongrass</li>
+                    <li>Kaffir lime leaves</li>
+                    <li>Fish sauce</li>
+                    <li>Seasoning powder</li>
+                    <li>Chili paste</li>
+                    <li>Unsweetened condensed milk</li>
+                    <li>Bird's eye chilies</li>
+                    <li>Salt</li>
+                    <li>Lime</li>
+                    <li>Shallots</li>
+                    <li>Cilantro</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Dessert -->
+    <div class="modal fade " id="des1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="des1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="des1Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Raspberry Puree</li>
+                    <li>Raspberry</li>
+                    <li>Sugar</li>
+                    <li>Lemon juice</li>
+                    <li>Gelatin powder</li>
+                    <li>Biscuit crumbs</li>
+                    <li>Unsalted butter</li>
+                    <li>Cream cheese</li>
+                    <li>Plain yogurt</li>
+                    <li>Whipping cream</li>
+                    <li>Fresh milk</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="des2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="des2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="des2Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Sugar</li>
+                    <li>Yellow lemon juice</li>
+                    <li>Cream cheese</li>
+                    <li>Eggs</li>
+                    <li>Vanilla extract</li>
+                    <li>Sweetened condensed milk</li>
+                    <li>Unsweetened condensed milk</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="des3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="des3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="des3Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Brown sugar</li>
+                    <li>Margarine</li>
+                    <li>Golden syrup</li>
+                    <li>All-purpose flour</li>
+                    <li>Ground ginger</li>
+                    <li>Baking soda</li>
+                    <li>Royal icing</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="des4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="des4Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="des4Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Pancake flour</li>
+                    <li>Unsalted butter</li>
+                    <li>Eggs</li>
+                    <li>Milk</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="des5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="des5Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="des5Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Wheat flour</li>
+                    <li>Cocoa powder</li>
+                    <li>Butter</li>
+                    <li>Compound chocolate</li>
+                    <li>Sugar</li>
+                    <li>Eggs</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="des6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="des6Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="des6Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Fresh eggs</li>
+                    <li>Coconut milk (with pandan aroma)</li>
+                    <li>Glutinous rice flour</li>
+                    <li>Palm sugar</li>
+                    <li>Granulated sugar</li>
+                    <li>Salt</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="des7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="des7Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="des7Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Cake flour</li>
+                    <li>Unsalted butter</li>
+                    <li>Powdered sugar</li>
+                    <li>Eggs</li>
+                    <li>Baking powder</li>
+                    <li>Oreos</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="des8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="des8Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="des8Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Eggs</li>
+                    <li>Granulated sugar</li>
+                    <li>Plain milk</li>
+                    <li>Butter</li>
+                    <li>Vanilla extract</li>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="des9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="des9Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="des9Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Biscuits</li>
+                    <li>Unsalted butter</li>
+                    <li>Caramel sauce</li>
+                    <li>Chocolate chips</li>
+                    <li>Fresh cream</li>
+                    <li>Rum flavor</li>
+                    <li>Bananas</li>
+                    <li>Whipping cream</li>
+                    <li>Cocoa powder</li>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="des10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="des10Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="des10Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Tapioca flour</li>
+                    <li>Glutinous rice flour</li>
+                    <li>Corn flour</li>
+                    <li>Granulated sugar</li>
+                    <li>Butter</li>
+                    <li>Fresh strawberries</li>
+                    <li>Sweetened red bean paste</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Beverage -->
+    <div class="modal fade " id="bev1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="bev1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bev1Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Thai tea powder</li>
+                    <li>Ceylon tea powder</li>
+                    <li>Milk</li>
+                    <li>Sweetened condensed milk</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="bev2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="bev2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bev2Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Coffee powder</li>
+                    <li>Fresh milk</li>
+                    <li>Red aroma syrup</li>
+                    <li>Sweetened condensed milk</li>
+                    <li>Cocoa powder</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="bev3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="bev3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bev3Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Red syrup</li>
+                    <li>Fresh milk</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="bev4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="bev4Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bev4Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Lemon</li>
+                    <li>Salt</li>
+                    <li>Syrup</li>
+                    <li>Tea base</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="bev5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="bev5Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bev5Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Honey-flavored yogurt</li>
+                    <li>Strawberries</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="bev6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="bev6Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bev6Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Strawberries, Raspberries, Blueberries, Mulberries</li>
+                    <li>Plain yogurt</li>
+                    <li>Strawberry syrup, raspberry syrup, blueberry syrup</li>
+                    <li>Syrup</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="bev7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="bev7Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bev7Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Soybeans</li>
+                    <li>Peanuts</li>
+                    <li>Pandan leaves</li>
+                    <li>Palm sugar</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="bev8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="bev8Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bev8Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Nam Dok Mai mango</li>
+                    <li>Banana</li>
+                    <li>Yogurt</li>
+                    <li>Passion fruit</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="bev9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="bev9Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bev9Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Avocado</li>
+                    <li>Nam Wa banana</li>
+                    <li>Honey fermented lemon</li>
+                    <li>Lemon wild honey enzymes</li>
+                    <li>Matcha powder</li>
+                    <li>Raw banana powder</li>
+                    <li>Bee pollen</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="bev10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="bev10Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bev10Label">Ingredients</h1>
+                </div>
+                <div class="modal-body">
+                    <li>Watermelon</li>
+                    <li>Syrup</li>
+                    <li>Salt</li>
+                    <li>Fresh milk</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal References -->
+    <div class="modal fade " id="reference" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="reference" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="reference">References</h1>
+                </div>
+                <div class="modal-body">
+                    <b>Google fonts:</b>
+                    <li>
+                        <a href="https://fonts.google.com/specimen/Inknut+Antiqua">Inknut+Antiqua</a>
+                    </li>
+                    <li>
+                        <a href="https://fonts.google.com/specimen/Inconsolata?query=Inconsolata">Inconsolata</a>
+                    </li>
+                    <b>Contents:</b>
+                    <li>
+                        <a
+                            href="https://cookpad.com/th/search/%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87">
+                            Food references
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://cookpad.com/th/search/%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99">
+                            Desserts references
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://cookpad.com/th/search/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%94%E0%B8%B7%E0%B9%88%E0%B8%A1">
+                            Beverages references
+                        </a>
+                    </li>
+                    <b>All images: Pinterest</b>
+                    <li>
+                        <a href="https://pin.it/43xiMiZBa">
+                            Stir-fried Chinese Kale with Crispy Pork
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/1nASNWZH1">
+                            Stir-fried minced pork with holy basil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/5RCtvDTg3">
+                            Stir-fried crispy pork with holy basil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/1pilZVmZS">
+                            Stir-fried minced beef with Thai basil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/3rv6cwhgJ">
+                            Stir-fried pork belly with chili and salt
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/4luQ24lX5">
+                            Clear soup with tofu and minced pork
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/6gcqXyXzt">
+                            Fried rice with fermented pork sausage
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/1BgLYtIrz">
+                            Spaghetti with spicy basil chicken
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/7hYi6zLn6">
+                            Steamed eggs with Thai-style sweet and sour sauce
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/44GE1m4sN">
+                            Tom Yum Goong (creamy shrimp spicy and sour soup)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/2cIcAYcDM">
+                            Stir-fried dry sukiyaki
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/5qSHWXmkM">
+                            Stir-fried cabbage with shrimp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/6i0Js5VWs">
+                            Shrimp fried rice
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/4pDhu8bgF">
+                            Garlic and pepper fried pork
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/12Ha0hHw3">
+                            Minced pork omelette
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/7bX7lNaSa">
+                            Sweet and sour stir-fry
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/6HUdlG3sB">
+                            Stir-fried instant noodles
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/5VmHr2I54">
+                            Stir-fried pork with soy sauce
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/5phyPl5hZ">
+                            Three-flavor shrimp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/vUwsM30Z8">
+                            Steamed egg with minced pork
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/UeVp5aRhP">
+                            Lemon raspberry cheesecake
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/2AhPNbHLS">
+                            Flan Cake
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/67sdcuP5O">
+                            Gingerbread cookies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/Lbqu967pk">
+                            Pancakes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/GxOlI68hG">
+                            Chocolate brownies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/4cT6BOMOc">
+                            Bua Loy with sweet egg
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/4gdEemEuk">
+                            Ice cream cookies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/7FCNxEmrS">
+                            Japanese Strawberry Shortcake
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/7pdA2PO6k">
+                            Banoffee Pie
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/1Qco9HeLG">
+                            Strawberry Daifuku
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/2riooVRP3">
+                            Thai tea
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/3KOkikIct">
+                            Mocha
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/6DXXrAwLo">
+                            Pink milk
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/4GVZDnWSI">
+                            Lemon tea
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/1bE9bq66H">
+                            Strawberry smoothie
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/5gIVoMask">
+                            Mixed berry smoothie
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/4Pteun9T6">
+                            Soy milk
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/29yn26uKP">
+                            Yogurt Smoothie
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/5MwK18LAZ">
+                            Green Kefir Avocado Smoothie
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pin.it/1RELnFH9p">
+                            Watermelon Smoothie
+                        </a>
+                    </li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal About -->
+    <div class="modal fade " id="about" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="aboutLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="aboutLabel">DELISH CAFE</h1>
+                </div>
+                <div class="modal-body">
+                    <b>Delish Cafe 𓌉◯𓇋</b> – <br>คาเฟ่ที่รวมความอร่อยครบทุกสไตล์ ไม่ว่าจะเป็นเมนูอาหารจานเด็ด
+                    ของหวานที่ทำสดใหม่จากวัตถุดิบคุณภาพ หรือเครื่องดื่มหลากหลายที่ชงอย่างพิถีพิถัน
+                    พร้อมมอบบรรยากาศอบอุ่นและมุมสบาย ๆ ให้คุณได้ใช้เวลาดี ๆ ทั้งกับครอบครัว เพื่อน
+                    หรือช่วงเวลาส่วนตัวที่พิเศษที่สุด
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script>
+        function order() {
+            alert("Order Completed!");
+        }
+        function ordercustom() {
+            document.getElementById("menuInput").value = "";
+            alert("Order Completed!");
+        }
+    </script>
+</body>
+
+<footer class="d-flex justify-content-center m-5">
+    ♡ FUNWEBPRO Project by "66070109 Bantita Chuatrakul" ˶ᵔ ᵕ ᵔ˶
+</footer>
+
+</html>
